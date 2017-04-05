@@ -1,0 +1,37 @@
+public class calculadora {
+    public static void main(String[] args) {
+        Scanner leia = new Scanner (System.in);
+        int n1,n2,r;
+        String operação;
+        System.out.print("Digite a operação desejada: ");
+        operação = leia.nextLine();
+        System.out.print("Digite o primeiro número: ");
+        n1 = leia.nextInt();
+        System.out.print("Digite o segundo número: ");
+        n2 = leia.nextInt();
+        
+        switch (operação){
+            case "+":
+          r = n1 + n2;
+                System.out.print("Resultado: "+r);
+                break;
+            case "-":
+                r = n1 - n2;
+                System.out.print("Resutado "+r);
+                break;
+            case "*":
+                r = n1 *n2;
+                System.out.print("Resultado: "+r);
+                break;
+            case "/":
+                r = n1/n2;
+                System.out.print("Resultado: "+r);
+                break;
+            default: 
+                System.out.print("Inválido");
+                
+        }
+        
+    }
+}
+
