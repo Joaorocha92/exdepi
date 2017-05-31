@@ -3,19 +3,16 @@ public static void main(String[] args) {
              Scanner leitor = new Scanner (System.in);
              Random aleatorio = new Random ();
              
+             int n [] = {20};
              String alternativa = "";
              
-             int  pergunta = 0, questao = 0, tentativas = 3 , pontos = 0 , ultima_questao =0;
+             int  pergunta = 0, questao =0, tentativas = 3 , pontos = 0 ;
              
-       
              boolean resposta = false;
-             
-        do{
-          
-          questao = aleatorio.nextInt(4);           
-            if(questao == ultima_questao)
-                 questao = aleatorio.nextInt(4);   
-          if(questao == 1){  
+             do{
+                 
+             questao = aleatorio.nextInt(20);
+              if(questao==1){  
                 System.out.println(" !!pergunta!! " + "\n");
 
                 System.out.println("Qual o nome do primeiro avião de Santos Dumont? ");
@@ -25,7 +22,9 @@ public static void main(String[] args) {
                 System.out.println("C- avião do forró");
                 System.out.println("D- A bunda do Rafael" + "\n");
                 System.out.println("RESPOSTA !" );
-
+                 
+                 
+               
                 alternativa = leitor.next();
 
                 switch(alternativa){
@@ -53,55 +52,10 @@ public static void main(String[] args) {
                   default:
                         System.out.println("Essa alternativa não existe "); 
                 }
-                ultima_questao = questao;
-               
-            
-             } 
-                 questao = aleatorio.nextInt(4);  
-                 if(questao == 2){  
-                            
-                            System.out.println(" !!pergunta!! " + "\n");
-
-                            System.out.println("Qual o nome do LULA? ");
-
-                            System.out.println("A- luiz ");
-                            System.out.println("B- inacio ");
-                            System.out.println("C- lula");
-                            System.out.println("D- Silva" + "\n");
-                            System.out.println("RESPOSTA !" );
-
-                            alternativa = leitor.next();
-
-                            switch(alternativa){
-
-                              case "a":
-                                  System.out.println("Resposta .......... !!ERRADA!! ");
-                                    tentativas = tentativas - 1;                        
-                                    break;
-                              case "b":
-                                  System.out.println("Resposta .......... !!ERRADA!! ");
-                                    tentativas = tentativas - 1;                        
-                                    break;
-                              case "c":
-                                    System.out.println("Resposta .......... !!ERRADA!! ");
-                                    tentativas = tentativas - 1;                        
-                                    break;
-
-                              case "d":
-                                    resposta = true;
-                                    pontos = pontos + 30;
-                                    System.out.println("resposta correta ");
-                                    System.out.println("pontos: "+pontos);
-
-                              break;                 
-
-                              default:
-                                    System.out.println("Essa alternativa não existe ");              
-                            }    
-                            }
-               
-             
-                }if(questao == 3){
+                
+        
+        }
+             if(questao == 2){
                     System.out.println(" !!pergunta!! " + "\n");
 
                             System.out.println("Toronto é uma cidade de qual país? ");
@@ -137,11 +91,5 @@ public static void main(String[] args) {
 
                               default:
                                     System.out.println("Essa alternativa não existe "); 
-                }
-                            
-        }        
-          
-        }while(!resposta);
-        }
-}
-
+                            } } }while(tentativas>0);
+                     }}
