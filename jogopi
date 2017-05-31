@@ -1,17 +1,28 @@
-public static void main(String[] args) {
+ */
+    public static void main(String[] args) {
+      
             
              Scanner leitor = new Scanner (System.in);
              Random aleatorio = new Random ();
              
-             int n [] = {20};
+             int n [] = {4};
              String alternativa = "";
+             boolean achei = true;
+             while(achei==true){
+                 achei= false;
+                 int questao = aleatorio.nextInt(4);
+                 for(int c =0; c<n.length; c++){
+                     questao= questao+1;
+                 }
+                  
+             }
              
              int  pergunta = 0, questao =0, tentativas = 3 , pontos = 0 ;
              
              boolean resposta = false;
              do{
                  
-             questao = aleatorio.nextInt(20);
+            
               if(questao==1){  
                 System.out.println(" !!pergunta!! " + "\n");
 
@@ -20,7 +31,7 @@ public static void main(String[] args) {
                 System.out.println("A- Bis ");
                 System.out.println("B- verme ");
                 System.out.println("C- avião do forró");
-                System.out.println("D- A bunda do Rafael" + "\n");
+                System.out.println("D- seila");
                 System.out.println("RESPOSTA !" );
                  
                  
@@ -63,7 +74,7 @@ public static void main(String[] args) {
                             System.out.println("A- China ");
                             System.out.println("B- Rússia ");
                             System.out.println("C- Canadá ");
-                            System.out.println("D- Austrália" + "\n");
+                            System.out.println("D- Austrália");
                             System.out.println("RESPOSTA !" );
 
                             alternativa = leitor.next();
@@ -93,3 +104,7 @@ public static void main(String[] args) {
                                     System.out.println("Essa alternativa não existe "); 
                             } } }while(tentativas>0);
                      }}
+    
+    
+
+
